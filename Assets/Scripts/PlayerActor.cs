@@ -8,7 +8,17 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 [DisallowMultipleComponent]
 public class PlayerActor : MonoBehaviour{
+
+	[SerializeField] private float speedX;
+	
 	[SerializeField] private float jumpFactor;
+
+	public float getSpeedX(){
+
+		return speedX;
+	}
+	
+	
 	private void Awake(){
 
 		myRigidbody2D = GetComponent<Rigidbody2D>();

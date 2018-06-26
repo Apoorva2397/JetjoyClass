@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 28572932}
   - component: {fileID: 28572933}
   - component: {fileID: 28572934}
+  - component: {fileID: 28572935}
   m_Layer: 0
   m_Name: BottomCeiling
   m_TagString: Untagged
@@ -179,7 +180,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 19e4bb33179f109439e9f8be5799470c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.990566, b: 0.043406036, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -213,6 +214,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &28572935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28572931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9a874ade4947d69ddcacec61599514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &82335222
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +235,7 @@ GameObject:
   - component: {fileID: 82335223}
   - component: {fileID: 82335224}
   - component: {fileID: 82335225}
+  - component: {fileID: 82335226}
   m_Layer: 0
   m_Name: TopCeiling
   m_TagString: Untagged
@@ -279,7 +292,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 19e4bb33179f109439e9f8be5799470c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.990566, b: 0.043406036, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -313,6 +326,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &82335226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 82335222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9a874ade4947d69ddcacec61599514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,7 +492,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2586f3eadaec82e4cbc729c55c8e9da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: {fileID: 0}
+  minDistance: 15
+  maxDistance: 20
+  player: {fileID: 1792017558}
+  cam: {fileID: 519420030}
+  topCeiling: {fileID: 82335226}
+  BottomCeiling: {fileID: 28572935}
+  entities:
+  - interactable: {fileID: 114643536346383194, guid: 0976a52ef80562e40baf441d220dc90f,
+      type: 2}
 --- !u!1 &1792017553
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,4 +634,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709ae81ee379d774aafacee03eba637e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedX: 5
   jumpFactor: 40
