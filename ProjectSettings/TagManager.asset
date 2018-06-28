@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -49,4 +50,7 @@ TagManager:
     locked: 0
   - name: ForeGround
     uniqueID: 629305741
+    locked: 0
+  - name: Player
+    uniqueID: 614676897
     locked: 0

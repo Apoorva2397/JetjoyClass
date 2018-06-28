@@ -91,6 +91,9 @@ public class IntervalSystem : MonoBehaviour{
 		Vector3 pos = Vector3.zero;
 		//spawning in scene based on prefab
 		Interactable created =Instantiate(chosen, pos, chosen.transform.rotation, transform);
+		
+		
+		
 		float topLimit = topCeiling.getBottomLeft().y;
 		float bottomLimit = BottomCeiling.getTopRight().y;
 		topLimit-=created.getTopDistance();
